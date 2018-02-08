@@ -1,4 +1,4 @@
-const MAPS_JS_KEY = 'AIzaSyAdgPk1lnEFCxgTSSk0sYUtG6kjwxfl78o'; // When running locally, replace with own key, as this is domain-controlled
+const MAPS_JS_KEY = 'AIzaSyDrJ5Ox3gfxhih4LF2OTUknFwGitEsEBZI'; // When running locally, replace with own key, as this is domain-controlled
 // see https://developers.google.com/maps/documentation/javascript/, "GET A KEY"
 
 (setMapsScriptSrc = () => {
