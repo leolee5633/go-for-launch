@@ -12,6 +12,12 @@ initMap = () => {
         zoom: 2,
         center: center
     });
+    
+     var oms = new OverlappingMarkerSpiderfier(map, {
+                    markersWontMove: true,
+                    markersWontHide: true,
+                    basicFormatEvents: true
+                  });
 
     COORDINATES.forEach(coord => {
         marker = new google.maps.Marker({
@@ -20,8 +26,9 @@ initMap = () => {
         });
 
         var marker, i;
+       
 
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        google.maps.event.addListener(marker, 'spider_click', (function(marker, i) {
             return function() {
                 infowindow.setContent(`
                     <div class="main-info">
@@ -36,6 +43,7 @@ initMap = () => {
                 `);
                 infowindow.open(map, marker);
             }
+            oms.addMarker(marker);
         })(marker, i))
     });
 
