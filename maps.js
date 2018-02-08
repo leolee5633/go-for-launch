@@ -42,9 +42,9 @@ initMap = () => {
                     </div>
                 `);
                 infowindow.open(map, marker);
-            }
-            oms.addMarker(marker);
+            }        
         })(marker, i))
+        oms.addMarker(marker);
     });
 
     document.getElementById('last-updated').innerText = UPDATED_DATE;
